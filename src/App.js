@@ -20,6 +20,7 @@ import Stylesheet from './components/Stylesheet';
 import Inline from './components/Inline';
 import Form from './components/Form'
 import LifecycleA from './components/LifecycleA';
+import Life from './components/Life'
 
 
 function App() {
@@ -54,7 +55,8 @@ function App() {
            {/* <Hello/> */}
 
            {/* <Form/> */}
-           <LifecycleA/>
+           {/* <LifecycleA/> */}
+           <Life/>
     </div>
   );
 }

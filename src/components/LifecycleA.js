@@ -25,6 +25,7 @@ import LifecycleB from './LifecycleB';
     }
     getSnapshotBeforeUpdate(prevProps, prevState){
         console.log('Lifecycles getSnapshotBeforeUpdate')
+        return null
     }
     componentDidUpdate(){
         console.log('lifeCycle componentDidUpdate ')
