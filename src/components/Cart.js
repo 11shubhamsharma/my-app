@@ -3,19 +3,40 @@ import React ,{Component} from 'react';
 class Cart extends Component{
     constructor(props){
         super(props);
-        this.state = {qty: 0 }
+        this.state = {qty: this.props.qty}
     }
-    updateQty = () =>(
-        this.setState((state) => (
-            {qty: state.qty + 1}
-        ))
-    )
+    // when depend on props then change
+    static getDerivedStateFromProps(props, state){
+        if(props.qty!== state.qty){
+        return{qty: props.qty}
+        }
+        return null;
+    }
+    shouldComponentUpdate(nextProps, nextState){
+        if(this.props.qty !== nextProps.qty){
+            console.log("should component  updated")
+            return true;
+        }
+        return false;
+
+    }
+    // updateQty = () =>(
+    //     this.setState((state) => (
+    //         {qty: state.qty + 1}
+    //     ))
+    // )
     componentDidMount(){
             console.log('execute after component render')
         }
     componentDidUpdate(prevProps,prevState){
-        console.log('Component')
+        if(this.props.lifeid !== prevProps.lifeid){
+            console.log('Component updated')
+ 
+        }
 
+    }
+    componentWillMount(){
+        console.log("component destory")
     }
     render(){
         return(
@@ -23,7 +44,6 @@ class Cart extends Component{
                 <h2>
                    here {this.state.qty}
                 </h2>
-                <button onClick={this.updateQty}>click</button>
             </div>
         )
     }
