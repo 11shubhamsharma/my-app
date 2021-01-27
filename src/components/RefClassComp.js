@@ -1,9 +1,10 @@
-import React ,{Component} from 'react'
- 
-class inputRefClassComp  extends Component{
+import React,{Component} from 'react'
+
+class RefClassComp extends Component{
     constructor(props){
         super(props)
         this.inputRef = React.createRef()
+
     }
     focusInput(){
         this.inputRef.current.focus()
@@ -11,11 +12,10 @@ class inputRefClassComp  extends Component{
     render(){
         return(
             <div>
-                <input type="text" ref={this.inputRef}/>
+              <input type="text" ref={this.inputRef}></input>
             </div>
         )
-
     }
-     
 }
-export default  inputRefClassComp
+
+export default RefClassComp

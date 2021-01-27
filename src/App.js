@@ -26,15 +26,33 @@ import Table from './components/Table';
 import PureComp from './components/PureComp';
 import ParentComp from './components/ParentComp';
 import RefsDemo from './components/RefsDemo';
+import inputRefClassComp from './components/inputRefClassComp';
+import FRIParentinput from './components/FRIParentinput';
+import Hero from './components/Hero';
+import ErrorBoundary from './components/ErrorBoundary';
+import ClickCounter from './components/ClickCounter';
+import HoverCunter from './components/HoverCunter';
+import Clickcountertwo from './components/Clickcountertwo';
+import HoverCountTwo from './components/HoverCountTwo';
+import User from './components/User';
+import Countertwo from './components/Countertwo';
+import { UserProvider } from './components/userContext';
+import ComponentC from './components/ComponentC';
+import PostList from './components/PostList';
+import PostForm from './components/PostForm';
+
+
+
+
 
 
 function App() {
   return (
     <div className="App">
    
-     {/* <Stylesheet  */}
-     {/* <Stylesheet primary={false}/> */}
-     {/* <Inline/> */}
+     {/* <Stylesheet />
+     <Stylesheet primary={false}/>
+     <Inline/> */}
     {/* <NameListIndex/> */}
     {/* <NameList></NameList> */}
     {/* <ConditionalRendering/> */}
@@ -66,7 +84,34 @@ function App() {
            {/* <Table></Table> */}
            {/* <PureComp></PureComp> */}
            {/* <ParentComp/> */}
-           <RefsDemo/>
+           {/* <RefsDemo/> */}
+           {/* <inputRefClassComp></inputRefClassComp> */}
+           {/* <FRIParentinput/> */}
+           {/* <ErrorBoundary>
+            <Hero heroName="hello"/>
+            <Hero heroName="new" />
+            <Hero heroName="joker" />
+           </ErrorBoundary> */}
+           {/* <ClickCounter name='krishna'/>
+           <HoverCunter></HoverCunter> */}
+           {/* <Clickcountertwo/> */}
+           {/* <HoverCountTwo></HoverCountTwo> */}
+           {/* <User name={ (isLoggedIn) =>  isLoggedIn ? 'krishna' : "guest "}/> */}
+           {/* <Countertwo 
+              render={(count,incrementCount) =>(
+               <Clickcountertwo count={count} incrementCount={incrementCount}/> 
+             )}
+             />
+             <Countertwo render={(count,incrementCount) =>
+             (<HoverCountTwo count={count} incrementCount={incrementCount}/> 
+             )}
+             /> */}
+             {/* <UserProvider  value="krishna">
+             <ComponentC></ComponentC>
+             </UserProvider> */}
+             {/* <PostList/> */}
+             {/* <PostForm></PostForm> */}
+
     </div>
   );
 }
